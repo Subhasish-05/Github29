@@ -9,15 +9,17 @@ bool prime(int num)
     {
         return false;
     }
-
+    int count = 0;
     // Check for factors from 2 to sqrt(num)
-    for (int i = 2; i * i <= num; i++)
+    for (int i = 2; i <= num; i++)
     {
         if (num % i == 0)
         {
-            return true;
+            count++;
         }
     }
-
-    return true;
+    if (count==2) {
+        return true;
+    }
+    return false;
 }
